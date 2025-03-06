@@ -1,0 +1,10 @@
+Chapter: 4
+implement cookie method -> override
+cookie should be called from the browser -> use hashMap
+
+---
+
+Theory of Chapter 5
+- getHeader method and other methods
+- MIME type
+- getPermission methods

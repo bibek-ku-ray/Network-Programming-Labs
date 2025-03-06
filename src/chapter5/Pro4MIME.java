@@ -7,29 +7,25 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class Pro4MIME {
-    public static void main(String[] args) {
-        try {
-            // Guess MIME type of a webpage
-            URL url = new URL("https://deerwalk.edu.np");
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            String webpageMimeType = connection.getContentType();
-            System.out.println("Webpage MIME Type: " + webpageMimeType);
-            connection.disconnect();
+    public static void main(String[] args) throws IOException {
 
-            // Guess MIME type of a PDF file
-            File pdfFile = new File("path/to/your/file.pdf");
-            String pdfMimeType = URLConnection.guessContentTypeFromName(pdfFile.getName());
-            System.out.println("PDF MIME Type: " + pdfMimeType);
+        // Guess MIME type of a webpage
+        URL url = new URL("https://deerwalk.edu.np");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        String webpageMimeType = connection.getContentType();
+        System.out.println("Webpage MIME Type: " + webpageMimeType);
+        connection.disconnect();
 
-            // Guess MIME type of a PNG file
-            File pngFile = new File("path/to/your/file.png");
-            String pngMimeType = URLConnection.guessContentTypeFromName(pngFile.getName());
-            System.out.println("PNG MIME Type: " + pngMimeType);
+        // Guess MIME type of a PDF file
+        File pdfFile = new File("assignment.pdf");
+        String pdfMimeType = URLConnection.guessContentTypeFromName(pdfFile.getName());
+        System.out.println("PDF MIME Type: " + pdfMimeType);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Guess MIME type of a PNG file
+        File pngFile = new File("wallpaper.png");
+        String pngMimeType = URLConnection.guessContentTypeFromName(pngFile.getName());
+        System.out.println("PNG MIME Type: " + pngMimeType);
     }
 }
 
