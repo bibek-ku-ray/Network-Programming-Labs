@@ -7,7 +7,7 @@ import java.net.URL;
 public class Pro1CheckAllowedMethod {
 
     public static void main(String[] args) {
-        checkHttpMethods("https://deerwalk.edu.np/DWIT/");
+        checkHttpMethods("https://deerwalk.edu.np/");
         checkHttpMethods("http://localhost:3000/health-check");
     }
 
@@ -44,8 +44,8 @@ public class Pro1CheckAllowedMethod {
 
 /*
 Output:
-URL: https://deerwalk.edu.np/DWIT/
-No 'Allow' header found in the response.
+URL: https://deerwalk.edu.np/
+Supported HTTP Methods: GET,POST,OPTIONS,HEAD
 URL: http://localhost:3000/health-check
 Supported HTTP Methods: GET,HEAD
 
